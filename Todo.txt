@@ -1,0 +1,6 @@
+
+- Concluir componente TUCDatasetControl
+
+- Verificar comportamento do xpmenu no form de login
+
+- Incluir novas constantes nas units dos outros idiomas

@@ -1,0 +1,7 @@
+2.18a 
+released in 20/04/2005
+*** changes after release:
+
+25/04/2005: corrected user profile bug: "privileged instruction"
+26/04/2005: corrected expand/collapse conflict with onClick event 
+27/04/2005: Delphi2005 support corrected. ucxpmenu.pas not found and profile access 

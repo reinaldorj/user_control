@@ -1,0 +1,58 @@
+Delphi 7:
+1 -   Adicionar "C:\Arquivos de programas\Borland\Delphi7\Source\Indy" no "Library Path" do Delphi 
+      ou pasta do indy 10
+
+Arquivos em Packages\Delphi7\ 
+
+2 -   UserControlD7_RT.dpk (compile)
+3 -   UserControlD7_DT.dpk (install)
+
+*     UCDBXD7.dpk (install) *** opcional para suporte dbExpress 
+      UCZeosD7.dpk (install) *** opcional para suporte Zeos6x
+      UCMDOD7.dpk (install) *** opcional para suporte MDO
+      UCAstaD7.dpk (install) *** opcional para suporte  Asta 3
+      UCDBISAMD7.dpk (install) *** opcional para suporte DBISAM
+      UCFIBD7.dpk (install) *** opcional para suporte FIBPlus
+      UCIBOD7.dpk (install) *** opcional para suporte IB Objects
+      UCMyDACD7.dpk (install) *** opcional para suporte MyDAC
+      UCMySQLDACD7.dpk (install) *** opcional para suporte MySQLDAC
+
+4 -   Incluir pasta "UserControl"\Source no "Library Path" do Delphi.
+
+
+
+=================================================================================
+1 -   Add "C:\Program Files\Borland\Delphi7\Source\Indy" in Delphi "Library Path"
+      or indy 10 folder
+
+Files in Packages\Delphi7\ 
+
+2 -   UserControlD7_RT.dpk (compile)
+3 -   UserControlD7_DT.dpk (install)
+
+*     UCDBXD7.dpk (install) *** optional for dbExpress support
+      UCZeosD7.dpk (install) *** optinal for Zeos6x support
+      UCMDOD7.dpk (install) *** optional for MDO support
+      UCAstaD7.dpk (install) *** optional for Asta 3 support
+      UCDBISAMD7.dpk (install) *** optional for DBISAM support
+      UCFIBD7.dpk (install) *** optional for FIBPlus support 
+      UCIBOD7.dpk (install) *** optional for IB Objects support 
+      UCMyDACD7.dpk (install) *** optional for MyDAC support 
+      UCMySQLDACD7.dpk (install) *** optional para MySQLDAC support 
+
+
+4 -   Add "UserControl"\Source folder in Delphi "Library Path".
+
+
+*** CHANGE DEFAULT LANGUAGE*** SEE: "Usercontrol"\Languages folder
+
+
+================================================================
+Delphi 2005:
+Arquivos em Packages\Delphi2005\ 
+1 - incluir a pasta source do indy (C:\Arquivos de programas\Borland\BDS\3.0\source\Indy10\System) 
+    em Options "Win32 Library Path".
+2 -   UserControlD9_RT.dpk (compile)
+3 -   UserControlD9_DT.dpk (install)
+
+4 -   Incluir pasta "UserControl"\Source em Options "Win32 Library Path".
