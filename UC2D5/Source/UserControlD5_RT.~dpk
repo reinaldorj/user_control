@@ -1,0 +1,60 @@
+package UserControlD5_RT;
+
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'User Control Package 2'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  bdertl,
+  vcldb,
+  ibxpress;
+
+contains
+  ViewLog_U in 'ViewLog_U.pas' {ViewLog},
+  CadPerfil_U in 'CadPerfil_U.pas' {CadPerfil},
+  CadUser_U in 'CadUser_U.pas' {CadUser},
+  EnvMsgForm_U in 'EnvMsgForm_U.pas' {EnvMsgForm},
+  IncPerfil_U in 'IncPerfil_U.pas' {IncPerfil},
+  IncUser_U in 'IncUser_U.pas' {IncUser},
+  LoginWindow_U in 'LoginWindow_U.pas' {LoginWindow},
+  MsgRecForm_U in 'MsgRecForm_U.pas' {MsgRecForm},
+  MsgsForm_U in 'MsgsForm_U.pas' {MsgsForm},
+  TrocaSenha_U in 'TrocaSenha_U.pas' {TrocaSenha},
+  UCConsts in 'UCConsts.pas',
+  UCBase in 'UCBase.pas',
+  UCMail in 'UCMail.pas',
+  UCMessages in 'UCMessages.pas',
+  UserPermis_U in 'UserPermis_U.pas' {UserPermis},
+  UCEMailForm_U in 'UCEMailForm_U.pas' {UCEMailForm},
+  UCXPMenu in 'UCXPMenu.pas',
+  UCDataInfo in 'UCDataInfo.pas',
+  UCIdle in 'UCIdle.pas',
+  UCXPSet in 'UCXPSet.pas',
+  UCIBXConn in 'UCIBXConn.pas',
+  UCBDEConn in 'UCBDEConn.pas';
+
+end.

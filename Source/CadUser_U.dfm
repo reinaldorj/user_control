@@ -1,34 +1,38 @@
 object CadUser: TCadUser
-  Left = 254
-  Top = 148
-  Width = 594
-  Height = 340
-  Caption = 'Seguran'#231'a'
+  Left = 292
+  Top = 225
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Usu'#225'rios cadastrados'
+  ClientHeight = 360
+  ClientWidth = 764
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clTeal
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
+  OnKeyPress = FormKeyPress
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object DBGrid1: TDBGrid
     Left = 0
     Top = 35
-    Width = 489
-    Height = 278
+    Width = 647
+    Height = 325
     Align = alClient
     DataSource = DataSource1
+    FixedColor = 16776176
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
     PopupMenu = PopupMenu1
     ReadOnly = True
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
+    TitleFont.Color = clTeal
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
@@ -38,41 +42,41 @@ object CadUser: TCadUser
         Expanded = False
         FieldName = 'Nome'
         Title.Alignment = taCenter
-        Width = 159
+        Width = 236
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Login'
         Title.Alignment = taCenter
-        Width = 123
+        Width = 154
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'Email'
         Title.Alignment = taCenter
-        Width = 187
+        Width = 231
         Visible = True
       end>
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 586
+    Width = 764
     Height = 35
     Align = alTop
-    BevelOuter = bvNone
+    BevelOuter = bvLowered
     Color = clWhite
     TabOrder = 1
     object lbDescricao: TLabel
       Left = 44
       Top = 12
-      Width = 188
+      Width = 192
       Height = 18
-      Caption = 'Cadastro de Usu'#225'rios'
+      Caption = 'Usu'#225'rios Cadastrados'
       Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clTeal
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
@@ -189,19 +193,23 @@ object CadUser: TCadUser
     end
   end
   object Panel3: TPanel
-    Left = 489
+    Left = 647
     Top = 35
-    Width = 97
-    Height = 278
+    Width = 117
+    Height = 325
     Align = alRight
-    BevelOuter = bvNone
+    BevelOuter = bvLowered
+    Color = 16776176
     TabOrder = 2
     object btAdic: TBitBtn
-      Left = 8
-      Top = 16
+      Left = 16
+      Top = 30
       Width = 81
       Height = 25
+      Hint = 'Adicionar um novo usu'#225'rio do sistema'
       Caption = '&Adicionar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
       OnClick = btAdicClick
       Glyph.Data = {
@@ -258,11 +266,14 @@ object CadUser: TCadUser
       NumGlyphs = 2
     end
     object BtAlt: TBitBtn
-      Left = 8
-      Top = 56
+      Left = 16
+      Top = 72
       Width = 81
       Height = 25
+      Hint = 'Alterar as informa'#231#245'es do usu'#225'rio selecinado'
       Caption = '&Alterar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
       OnClick = BtAltClick
       Glyph.Data = {
@@ -319,11 +330,14 @@ object CadUser: TCadUser
       NumGlyphs = 2
     end
     object BtExclui: TBitBtn
-      Left = 8
-      Top = 96
+      Left = 16
+      Top = 120
       Width = 81
       Height = 25
+      Hint = 'Excluir o usu'#225'rio selecinado'
       Caption = '&Excluir'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 2
       OnClick = BtExcluiClick
       Glyph.Data = {
@@ -380,11 +394,14 @@ object CadUser: TCadUser
       NumGlyphs = 2
     end
     object BtAcess: TBitBtn
-      Left = 8
-      Top = 136
+      Left = 16
+      Top = 168
       Width = 81
       Height = 25
+      Hint = 'Definir as funcionalidades do usu'#225'rio selecinado'
       Caption = '&Acessos'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 3
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
@@ -440,11 +457,14 @@ object CadUser: TCadUser
       NumGlyphs = 2
     end
     object BtExit: TBitBtn
-      Left = 8
-      Top = 216
+      Left = 16
+      Top = 264
       Width = 81
       Height = 25
+      Hint = 'Fechar esta janela'
       Caption = '&Fechar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 4
       OnClick = BtExitClick
       Glyph.Data = {
@@ -501,11 +521,14 @@ object CadUser: TCadUser
       NumGlyphs = 2
     end
     object BtPass: TBitBtn
-      Left = 8
-      Top = 176
+      Left = 16
+      Top = 216
       Width = 81
       Height = 25
+      Hint = 'Trocar a senha do usu'#225'rio selecionado'
       Caption = '&Senha'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 5
       OnClick = BtPassClick
       Glyph.Data = {
@@ -598,6 +621,7 @@ object CadUser: TCadUser
     XPSettings.Font.Name = 'Tahoma'
     XPSettings.Font.Style = []
     XPSettings.Color = clBtnFace
+    XPSettings.DrawMenuBar = False
     XPSettings.IconBackColor = clBtnFace
     XPSettings.MenuBarColor = clBtnFace
     XPSettings.SelectColor = clHighlight
@@ -609,11 +633,13 @@ object CadUser: TCadUser
     XPSettings.IconWidth = 24
     XPSettings.DrawSelect = True
     XPSettings.UseSystemColors = True
+    XPSettings.UseDimColor = False
     XPSettings.OverrideOwnerDraw = False
     XPSettings.Gradient = False
     XPSettings.FlatMenu = False
     XPSettings.AutoDetect = False
     XPSettings.BitBtnColor = clBtnFace
+    XPSettings.ColorsChanged = True
     Left = 168
     Top = 144
   end

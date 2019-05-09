@@ -1,18 +1,21 @@
 object IncPerfil: TIncPerfil
-  Left = 302
-  Top = 269
-  BorderStyle = bsDialog
+  Left = 427
+  Top = 256
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Perfil de Usu'#225'rios'
   ClientHeight = 134
   ClientWidth = 436
-  Color = clBtnFace
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clTeal
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -21,7 +24,8 @@ object IncPerfil: TIncPerfil
     Width = 436
     Height = 35
     Align = alTop
-    BevelOuter = bvNone
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
     Color = clWhite
     TabOrder = 1
     object LbDescricao: TLabel
@@ -31,7 +35,7 @@ object IncPerfil: TIncPerfil
       Height = 18
       Caption = 'Adicionar Perfil'
       Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clTeal
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
@@ -154,6 +158,7 @@ object IncPerfil: TIncPerfil
     Height = 99
     Align = alRight
     BevelOuter = bvNone
+    Color = 16776176
     TabOrder = 2
     object btGravar: TBitBtn
       Left = 8
@@ -285,20 +290,22 @@ object IncPerfil: TIncPerfil
     Height = 99
     Align = alClient
     BevelInner = bvRaised
-    BevelOuter = bvLowered
+    BevelOuter = bvNone
+    Color = 16776176
     TabOrder = 0
     object lbNome: TLabel
       Left = 16
-      Top = 24
+      Top = 40
       Width = 54
       Height = 13
       Caption = 'Descri'#231#227'o :'
     end
     object EditDescricao: TEdit
       Left = 80
-      Top = 16
-      Width = 249
+      Top = 32
+      Width = 233
       Height = 21
+      CharCase = ecUpperCase
       MaxLength = 30
       TabOrder = 0
     end

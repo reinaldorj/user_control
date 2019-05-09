@@ -1,0 +1,69 @@
+package UserControlD7_RT;
+
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'User Control Package 2'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  rtl,
+  dbrtl,
+  dsnap,
+  vclactnband,
+  indy,
+  bdertl,
+  dbexpress,
+  vcldb,
+  dbxcds,
+  adortl,
+  ibxpress;
+
+contains
+  ViewLog_U in '..\..\Source\ViewLog_U.pas' {ViewLog},
+  CadPerfil_U in '..\..\Source\CadPerfil_U.pas' {CadPerfil},
+  CadUser_U in '..\..\Source\CadUser_U.pas' {CadUser},
+  EnvMsgForm_U in '..\..\Source\EnvMsgForm_U.pas' {EnvMsgForm},
+  IncPerfil_U in '..\..\Source\IncPerfil_U.pas' {IncPerfil},
+  IncUser_U in '..\..\Source\IncUser_U.pas' {IncUser},
+  LoginWindow_U in '..\..\Source\LoginWindow_U.pas' {LoginWindow},
+  MsgRecForm_U in '..\..\Source\MsgRecForm_U.pas' {MsgRecForm},
+  MsgsForm_U in '..\..\Source\MsgsForm_U.pas' {MsgsForm},
+  TrocaSenha_U in '..\..\Source\TrocaSenha_U.pas' {TrocaSenha},
+  UCConsts in '..\..\Source\UCConsts.pas',
+  UCBase in '..\..\Source\UCBase.pas',
+  UCMail in '..\..\Source\UCMail.pas',
+  UCMessages in '..\..\Source\UCMessages.pas',
+  UserPermis_U in '..\..\Source\UserPermis_U.pas' {UserPermis},
+  UCADOConn in '..\..\Source\UCADOConn.pas',
+  UCEMailForm_U in '..\..\Source\UCEMailForm_U.pas' {UCEMailForm},
+  UCXPStyle in '..\..\Source\UCXPStyle.pas',
+  UCDataInfo in '..\..\Source\UCDataInfo.pas',
+  UCIdle in '..\..\Source\UCIdle.pas',
+  UCXPSettings in '..\..\Source\UCXPSettings.pas',
+  UCIBXConn in '..\..\Source\UCIBXConn.pas',
+  UCDBXConn in '..\..\Source\UCDBXConn.pas';
+
+end.

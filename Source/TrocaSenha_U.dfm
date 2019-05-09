@@ -1,19 +1,22 @@
 object TrocaSenha: TTrocaSenha
   Left = 331
   Top = 278
-  BorderStyle = bsDialog
-  Caption = 'Seguran'#231'a'
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Trocar senha'
   ClientHeight = 165
-  ClientWidth = 355
-  Color = clBtnFace
+  ClientWidth = 365
+  Color = 16776176
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clTeal
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
+  OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
   object lbSenhaAtu: TLabel
@@ -40,10 +43,11 @@ object TrocaSenha: TTrocaSenha
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 355
+    Width = 365
     Height = 35
     Align = alTop
-    BevelOuter = bvNone
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
     Color = clWhite
     TabOrder = 0
     object lbDescricao: TLabel
@@ -53,7 +57,7 @@ object TrocaSenha: TTrocaSenha
       Height = 18
       Caption = 'Trocar Senha '
       Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clTeal
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
@@ -170,19 +174,24 @@ object TrocaSenha: TTrocaSenha
     end
   end
   object Panel3: TPanel
-    Left = 258
+    Left = 268
     Top = 35
     Width = 97
     Height = 130
     Align = alRight
-    BevelOuter = bvNone
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    Color = 16776176
     TabOrder = 1
     object btGrava: TBitBtn
       Left = 8
-      Top = 16
+      Top = 24
       Width = 81
       Height = 25
+      Hint = 'Grave a nova senha'
       Caption = '&Gravar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
@@ -239,10 +248,13 @@ object TrocaSenha: TTrocaSenha
     end
     object btCancel: TBitBtn
       Left = 8
-      Top = 56
+      Top = 72
       Width = 81
       Height = 25
+      Hint = 'Cancelar'
       Caption = '&Cancelar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
       OnClick = btCancelClick
       Glyph.Data = {
@@ -300,30 +312,39 @@ object TrocaSenha: TTrocaSenha
     end
   end
   object EditAtu: TEdit
-    Left = 112
+    Left = 80
     Top = 56
-    Width = 121
+    Width = 153
     Height = 21
-    MaxLength = 10
+    Hint = 'Digite sua senha atual'
+    MaxLength = 15
+    ParentShowHint = False
     PasswordChar = '*'
+    ShowHint = True
     TabOrder = 2
   end
   object EditNova: TEdit
-    Left = 112
+    Left = 80
     Top = 88
-    Width = 121
+    Width = 153
     Height = 21
-    MaxLength = 10
+    Hint = 'Digite a nova senha'
+    MaxLength = 15
+    ParentShowHint = False
     PasswordChar = '*'
+    ShowHint = True
     TabOrder = 3
   end
   object EditConfirma: TEdit
-    Left = 112
+    Left = 80
     Top = 120
-    Width = 121
+    Width = 153
     Height = 21
-    MaxLength = 10
+    Hint = 'Confirme a nova senha'
+    MaxLength = 15
+    ParentShowHint = False
     PasswordChar = '*'
+    ShowHint = True
     TabOrder = 4
   end
   object UCXPStyle: TUCXPStyle
@@ -336,6 +357,7 @@ object TrocaSenha: TTrocaSenha
     XPSettings.Font.Name = 'Tahoma'
     XPSettings.Font.Style = []
     XPSettings.Color = clBtnFace
+    XPSettings.DrawMenuBar = False
     XPSettings.IconBackColor = clBtnFace
     XPSettings.MenuBarColor = clBtnFace
     XPSettings.SelectColor = clHighlight
@@ -347,11 +369,13 @@ object TrocaSenha: TTrocaSenha
     XPSettings.IconWidth = 24
     XPSettings.DrawSelect = True
     XPSettings.UseSystemColors = True
+    XPSettings.UseDimColor = False
     XPSettings.OverrideOwnerDraw = False
     XPSettings.Gradient = False
     XPSettings.FlatMenu = False
     XPSettings.AutoDetect = False
     XPSettings.BitBtnColor = clBtnFace
+    XPSettings.ColorsChanged = True
     Left = 32
     Top = 112
   end

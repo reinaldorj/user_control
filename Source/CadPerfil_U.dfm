@@ -1,16 +1,18 @@
 object CadPerfil: TCadPerfil
   Left = 370
   Top = 181
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
-  Caption = 'Seguranca'
+  Caption = 'Perfil de usu'#225'rio'
   ClientHeight = 242
-  ClientWidth = 393
+  ClientWidth = 458
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clTeal
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
@@ -20,15 +22,22 @@ object CadPerfil: TCadPerfil
   object DBGrid1: TDBGrid
     Left = 0
     Top = 35
-    Width = 296
+    Width = 361
     Height = 207
     Align = alClient
     DataSource = DataSource1
+    FixedColor = 16776176
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clTeal
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
     Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
     ReadOnly = True
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
+    TitleFont.Color = clTeal
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
@@ -39,16 +48,17 @@ object CadPerfil: TCadPerfil
         FieldName = 'Nome'
         Title.Alignment = taCenter
         Title.Caption = 'Perfil'
-        Width = 274
+        Width = 340
         Visible = True
       end>
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 393
+    Width = 458
     Height = 35
     Align = alTop
+    BevelInner = bvLowered
     BevelOuter = bvNone
     Color = clWhite
     TabOrder = 1
@@ -59,7 +69,7 @@ object CadPerfil: TCadPerfil
       Height = 18
       Caption = 'Perfil de Usu'#225'rios'
       Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clTeal
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
@@ -176,19 +186,29 @@ object CadPerfil: TCadPerfil
     end
   end
   object Panel3: TPanel
-    Left = 296
+    Left = 361
     Top = 35
     Width = 97
     Height = 207
     Align = alRight
-    BevelOuter = bvNone
+    BevelOuter = bvLowered
+    Color = 16776176
     TabOrder = 2
     object btAdic: TBitBtn
       Left = 8
       Top = 8
       Width = 81
       Height = 25
+      Hint = 'Adicionar um novo perfil de usu'#225'rio'
       Caption = '&Adicionar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clTeal
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
       OnClick = btAdicClick
       Glyph.Data = {
@@ -250,6 +270,14 @@ object CadPerfil: TCadPerfil
       Width = 81
       Height = 25
       Caption = '&Alterar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clTeal
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
       OnClick = BtAltClick
       Glyph.Data = {
@@ -311,6 +339,14 @@ object CadPerfil: TCadPerfil
       Width = 81
       Height = 25
       Caption = '&Excluir'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clTeal
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 2
       OnClick = BtExcluiClick
       Glyph.Data = {
@@ -372,6 +408,14 @@ object CadPerfil: TCadPerfil
       Width = 81
       Height = 25
       Caption = '&Fechar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clTeal
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 3
       OnClick = BtExitClick
       Glyph.Data = {
@@ -433,6 +477,14 @@ object CadPerfil: TCadPerfil
       Width = 81
       Height = 25
       Caption = '&Acessos'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clTeal
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 4
       Glyph.Data = {
         36060000424D3606000000000000360000002800000020000000100000000100
@@ -502,6 +554,7 @@ object CadPerfil: TCadPerfil
     XPSettings.Font.Name = 'Tahoma'
     XPSettings.Font.Style = []
     XPSettings.Color = clBtnFace
+    XPSettings.DrawMenuBar = False
     XPSettings.IconBackColor = clBtnFace
     XPSettings.MenuBarColor = clBtnFace
     XPSettings.SelectColor = clHighlight
@@ -513,11 +566,13 @@ object CadPerfil: TCadPerfil
     XPSettings.IconWidth = 24
     XPSettings.DrawSelect = True
     XPSettings.UseSystemColors = True
+    XPSettings.UseDimColor = False
     XPSettings.OverrideOwnerDraw = False
     XPSettings.Gradient = False
     XPSettings.FlatMenu = False
     XPSettings.AutoDetect = False
     XPSettings.BitBtnColor = clBtnFace
+    XPSettings.ColorsChanged = True
     Left = 160
     Top = 104
   end

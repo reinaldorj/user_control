@@ -15,21 +15,19 @@ uses
 type
   TLoginWindow = class(TForm)
     PTop: TPanel;
-    ImgTop: TImage;
-    PLeft: TPanel;
-    imgLeft: TImage;
     PBottom: TPanel;
-    ImgBottom: TImage;
     Panel1: TPanel;
     PLogin: TPanel;
     LbUsuario: TLabel;
     LbSenha: TLabel;
     EditUsuario: TEdit;
     EditSenha: TEdit;
-    btOK: TBitBtn;
-    BtCancela: TBitBtn;
     lbEsqueci: TLabel;
     UCXPStyle_qmd: TUCXPStyle;
+    Image1: TImage;
+    Label1: TLabel;
+    BtCancela: TBitBtn;
+    btOK: TBitBtn;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BtCancelaClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -88,7 +86,7 @@ procedure TLoginWindow.FormShow(Sender: TObject);
 var
   x , y, w, h : Integer;
 begin
-  w := Max(ImgTop.Width, ImgLeft.Width+PLogin.Width);
+ { w := Max(ImgTop.Width, ImgLeft.Width+PLogin.Width);
   w := Max(w, ImgBottom.Width);
   h := Max(ImgLeft.Height + ImgTop.Height + ImgBottom.Height , ImgTop.Height + PLogin.Height + ImgBottom.Height);
 
@@ -99,7 +97,7 @@ begin
   PTop.Height := ImgTop.Height;
   ImgTop.AutoSize := False;
   ImgTop.Align := alClient;
-  ImgTop.Center := True;
+ ImgTop.Center := True;
 
   //Centro
   PLeft.Width := ImgLeft.Width;
@@ -121,11 +119,13 @@ begin
   y := (Screen.Height div 2) - (Height div 2);
   top := y;
   Left := x;
+  }
   if TUserControl(Owner).Login.GetLoginName = lnUserName then EditUsuario.Text := GetLocalUserName;
   if TUserControl(Owner).Login.GetLoginName = lnMachineName then EditUsuario.Text := GetLocalComputerName;
   if TUserControl(Owner).Login.GetLoginName <> lnNone then EditSenha.SetFocus;
 //  EditUsuario.Text := GetLocalComputerName;   //BGM
 //  EditSenha.SetFocus;
+EditUsuario.SetFocus;
 end;
 
 procedure TLoginWindow.EditUsuarioChange(Sender: TObject);
@@ -135,7 +135,14 @@ end;
 
 procedure TLoginWindow.FormKeyPress(Sender: TObject; var Key: Char);
 begin
-  if Key = #13 then btOK.Click; 
+ // if Key = #13 then btOK.Click;
+
+   if key = #27 then BtCancela.Click;
+   if key = #13 then
+   begin
+   key := #0;
+   Perform(WM_NEXTDLGCTL, 0, 0);
+   end;
 end;
 
 procedure TLoginWindow.FormActivate(Sender: TObject);

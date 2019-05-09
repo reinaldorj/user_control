@@ -1112,10 +1112,11 @@ begin
     LbSenha.Caption := LabelPassword;
     btOK.Caption := Settings.Login.BtOk;
     BtCancela.Caption := BtCancel;
-    if LeftImage <> nil then ImgLeft.Picture.Assign(LeftImage);
+  {  if LeftImage <> nil then ImgLeft.Picture.Assign(LeftImage);
     if BottomImage <> nil then ImgBottom.Picture.Assign(BottomImage);
     if TopImage <> nil then ImgTop.Picture.Assign(TopImage);
-{$IFDEF VER130}
+    }
+    {$IFDEF VER130}
 {$ELSE}
     if Assigned(MailUserControl) then
     begin
@@ -1409,7 +1410,7 @@ begin
       if BtPassword = '' then BtPassword := Const_Cad_BtSenha;
       if BtClose = '' then BtClose := Const_Cad_BtFechar;
       if PromptDelete = '' then PromptDelete := Const_Cad_ConfirmaExcluir;
-      if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_Cad_ConfirmaDelete_WindowCaption; //added by fduenas
+ //     if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_Cad_ConfirmaDelete_WindowCaption; //added by fduenas
 
     end;
     with DestSettings.UsersProfile do
@@ -1423,7 +1424,7 @@ begin
       if BtRights = '' then BtRights := Const_Prof_BtPermissoes;    //BGM
       if BtClose = '' then BtClose := Const_Prof_BtFechar;
       if PromptDelete = '' then PromptDelete := Const_Prof_ConfirmaExcluir;
-      if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_Prof_ConfirmaDelete_WindowCaption; //added by fduenas
+ //     if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_Prof_ConfirmaDelete_WindowCaption; //added by fduenas
     end;
     with DestSettings.AddChangeUser do
     begin
@@ -1498,13 +1499,13 @@ begin
       if BtDelete = '' then BtDelete := Const_LogC_BtExcluir;
       if BtClose = '' then BtClose := Const_LogC_BtFechar;
       if PromptDelete = '' then PromptDelete := Const_LogC_ConfirmaExcluir;
-      if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_LogC_ConfirmaDelete_WindowCaption; //added by fduenas
+    //  if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_LogC_ConfirmaDelete_WindowCaption; //added by fduenas
       if OptionUserAll = '' then OptionUserAll := Const_LogC_Todos; //added by fduenas
       if OptionLevelLow = '' then OptionLevelLow := Const_LogC_Low; //added by fduenas
       if OptionLevelNormal = '' then OptionLevelNormal := Const_LogC_Normal; //added by fduenas
       if OptionLevelHigh = '' then OptionLevelHigh := Const_LogC_High; //added by fduenas
       if OptionLevelCritic = '' then OptionLevelCritic := Const_LogC_Critic; //added by fduenas
-      if DeletePerformed = '' then DeletePerformed := Const_LogC_ExcluirEfectuada; //added by fduenas
+    //  if DeletePerformed = '' then DeletePerformed := Const_LogC_ExcluirEfectuada; //added by fduenas
     end;
     with DestSettings.AppMessages do
     begin
@@ -1512,15 +1513,15 @@ begin
       if MsgsForm_BtReplay = '' then MsgsForm_BtReplay := Const_Msgs_BtReplay;
       if MsgsForm_BtForward = '' then MsgsForm_BtForward := Const_Msgs_BtForward;
       if MsgsForm_BtDelete = '' then MsgsForm_BtDelete := Const_Msgs_BtDelete;
-      if MsgsForm_BtClose = '' then MsgsForm_BtDelete := Const_Msgs_BtClose; //added by fduenas
+   //   if MsgsForm_BtClose = '' then MsgsForm_BtDelete := Const_Msgs_BtClose; //added by fduenas
       if MsgsForm_WindowCaption = '' then MsgsForm_WindowCaption := Const_Msgs_WindowCaption;
       if MsgsForm_ColFrom = '' then  MsgsForm_ColFrom := Const_Msgs_ColFrom;
       if MsgsForm_ColSubject = '' then  MsgsForm_ColSubject := Const_Msgs_ColSubject;
       if MsgsForm_ColDate = '' then MsgsForm_ColDate := Const_Msgs_ColDate;
       if MsgsForm_PromptDelete = '' then  MsgsForm_PromptDelete := Const_Msgs_PromptDelete;
-      if MsgsForm_PromptDelete_WindowCaption = '' then  MsgsForm_PromptDelete_WindowCaption := Const_Msgs_PromptDelete_WindowCaption;
-      if MsgsForm_NoMessagesSelected = '' then  MsgsForm_NoMessagesSelected := Const_Msgs_NoMessagesSelected;
-      if MsgsForm_NoMessagesSelected_WindowCaption = '' then  MsgsForm_NoMessagesSelected_WindowCaption := Const_Msgs_NoMessagesSelected_WindowCaption;
+   //   if MsgsForm_PromptDelete_WindowCaption = '' then  MsgsForm_PromptDelete_WindowCaption := Const_Msgs_PromptDelete_WindowCaption;
+ //     if MsgsForm_NoMessagesSelected = '' then  MsgsForm_NoMessagesSelected := Const_Msgs_NoMessagesSelected;
+   //   if MsgsForm_NoMessagesSelected_WindowCaption = '' then  MsgsForm_NoMessagesSelected_WindowCaption := Const_Msgs_NoMessagesSelected_WindowCaption;
 
       if MsgRec_BtClose = '' then  MsgRec_BtClose := Const_MsgRec_BtClose;
       if MsgRec_WindowCaption = '' then MsgRec_WindowCaption := Const_MsgRec_WindowCaption;
@@ -1538,8 +1539,8 @@ begin
       if MsgSend_RadioUser = '' then MsgSend_RadioUser := Const_MsgSend_RadioUser;
       if MsgSend_RadioAll = '' then MsgSend_RadioAll := Const_MsgSend_RadioAll;
       if MsgSend_GroupMessage = '' then MsgSend_GroupMessage := Const_MsgSend_GroupMessage;
-      if MsgSend_LabelSubject = '' then MsgSend_LabelSubject := Const_MsgSend_LabelSubject; //added by fduenas
-      if MsgSend_LabelMessageText = '' then MsgSend_LabelMessageText := Const_MsgSend_LabelMessageText; //added by fduenas
+    //  if MsgSend_LabelSubject = '' then MsgSend_LabelSubject := Const_MsgSend_LabelSubject; //added by fduenas
+   //   if MsgSend_LabelMessageText = '' then MsgSend_LabelMessageText := Const_MsgSend_LabelMessageText; //added by fduenas
     end;
     DestSettings.WindowsPosition := poDesktopCenter;
 end;
@@ -3106,7 +3107,7 @@ begin
       if BtPassword = '' then BtPassword := Const_Cad_BtSenha;
       if BtClose = '' then BtClose := Const_Cad_BtFechar;
       if PromptDelete = '' then PromptDelete := Const_Cad_ConfirmaExcluir;
-      if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_Cad_ConfirmaDelete_WindowCaption; //added by fduenas
+ //     if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_Cad_ConfirmaDelete_WindowCaption; //added by fduenas
     end;
     with DestSettings.UsersProfile do
     begin
@@ -3119,7 +3120,7 @@ begin
       if BtRights = '' then BtRights := Const_Prof_BtPermissoes;
       if BtClose = '' then BtClose := Const_Prof_BtFechar;
       if PromptDelete = '' then PromptDelete := Const_Prof_ConfirmaExcluir;
-      if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_Prof_ConfirmaDelete_WindowCaption; //added by fduenas
+  //    if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_Prof_ConfirmaDelete_WindowCaption; //added by fduenas
     end;
     with DestSettings.AddChangeUser do
     begin
@@ -3193,13 +3194,13 @@ begin
       if BtDelete = '' then BtDelete := Const_LogC_BtExcluir;
       if BtClose = '' then BtClose := Const_LogC_BtFechar;
       if PromptDelete = '' then PromptDelete := Const_LogC_ConfirmaExcluir;
-      if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_LogC_ConfirmaDelete_WindowCaption; //added by fduenas
+   //   if PromptDelete_WindowCaption = '' then PromptDelete_WindowCaption := Const_LogC_ConfirmaDelete_WindowCaption; //added by fduenas
       if OptionUserAll = '' then OptionUserAll := Const_LogC_Todos; //added by fduenas
       if OptionLevelLow = '' then OptionLevelLow := Const_LogC_Low; //added by fduenas
       if OptionLevelNormal = '' then OptionLevelNormal := Const_LogC_Normal; //added by fduenas
       if OptionLevelHigh = '' then OptionLevelHigh := Const_LogC_High; //added by fduenas
       if OptionLevelCritic = '' then OptionLevelCritic := Const_LogC_Critic; //added by fduenas
-      if DeletePerformed = '' then DeletePerformed := Const_LogC_ExcluirEfectuada; //added by fduenas
+ //    if DeletePerformed = '' then DeletePerformed := Const_LogC_ExcluirEfectuada; //added by fduenas
     end;
     with DestSettings.AppMessages do
     begin
@@ -3207,15 +3208,15 @@ begin
       if MsgsForm_BtReplay = '' then MsgsForm_BtReplay := Const_Msgs_BtReplay;
       if MsgsForm_BtForward = '' then MsgsForm_BtForward := Const_Msgs_BtForward;
       if MsgsForm_BtDelete = '' then MsgsForm_BtDelete := Const_Msgs_BtDelete;
-      if MsgsForm_BtClose = '' then MsgsForm_BtClose := Const_Msgs_BtClose; //added by fduenas
+   //   if MsgsForm_BtClose = '' then MsgsForm_BtClose := Const_Msgs_BtClose; //added by fduenas
       if MsgsForm_WindowCaption = '' then MsgsForm_WindowCaption := Const_Msgs_WindowCaption;
       if MsgsForm_ColFrom = '' then  MsgsForm_ColFrom := Const_Msgs_ColFrom;
       if MsgsForm_ColSubject = '' then  MsgsForm_ColSubject := Const_Msgs_ColSubject;
       if MsgsForm_ColDate = '' then MsgsForm_ColDate := Const_Msgs_ColDate;
       if MsgsForm_PromptDelete = '' then  MsgsForm_PromptDelete := Const_Msgs_PromptDelete;
-      if MsgsForm_PromptDelete_WindowCaption = '' then  MsgsForm_PromptDelete_WindowCaption := Const_Msgs_PromptDelete_WindowCaption; //added by fduenas
-      if MsgsForm_NoMessagesSelected = '' then  MsgsForm_NoMessagesSelected := Const_Msgs_NoMessagesSelected; //added by fduenas
-      if MsgsForm_NoMessagesSelected_WindowCaption = '' then  MsgsForm_NoMessagesSelected_WindowCaption := Const_Msgs_NoMessagesSelected_WindowCaption; //added by fduenas
+ //     if MsgsForm_PromptDelete_WindowCaption = '' then  MsgsForm_PromptDelete_WindowCaption := Const_Msgs_PromptDelete_WindowCaption; //added by fduenas
+ //     if MsgsForm_NoMessagesSelected = '' then  MsgsForm_NoMessagesSelected := Const_Msgs_NoMessagesSelected; //added by fduenas
+ //     if MsgsForm_NoMessagesSelected_WindowCaption = '' then  MsgsForm_NoMessagesSelected_WindowCaption := Const_Msgs_NoMessagesSelected_WindowCaption; //added by fduenas
 
       if MsgRec_BtClose = '' then  MsgRec_BtClose := Const_MsgRec_BtClose;
       if MsgRec_WindowCaption = '' then MsgRec_WindowCaption := Const_MsgRec_WindowCaption;
@@ -3233,8 +3234,8 @@ begin
       if MsgSend_RadioUser = '' then MsgSend_RadioUser := Const_MsgSend_RadioUser;
       if MsgSend_RadioAll = '' then MsgSend_RadioAll := Const_MsgSend_RadioAll;
       if MsgSend_GroupMessage = '' then MsgSend_GroupMessage := Const_MsgSend_GroupMessage;
-      if MsgSend_LabelSubject = '' then MsgSend_LabelSubject := Const_MsgSend_LabelSubject; //added by fduenas
-      if MsgSend_LabelMessageText = '' then MsgSend_LabelMessageText  := Const_MsgSend_LabelMessageText; //added by fduenas
+  //    if MsgSend_LabelSubject = '' then MsgSend_LabelSubject := Const_MsgSend_LabelSubject; //added by fduenas
+   //   if MsgSend_LabelMessageText = '' then MsgSend_LabelMessageText  := Const_MsgSend_LabelMessageText; //added by fduenas
     end;
     DestSettings.WindowsPosition := poDesktopCenter;
 end;

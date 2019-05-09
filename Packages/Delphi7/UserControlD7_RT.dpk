@@ -27,6 +27,21 @@ package UserControlD7_RT;
 {$RUNONLY}
 {$IMPLICITBUILD ON}
 
+requires
+  vcl,
+  rtl,
+  dbrtl,
+  dsnap,
+  vclactnband,
+  indy,
+  bdertl,
+  dbexpress,
+  vcldb,
+  dbxcds,
+  adortl,
+  ibxpress,
+  dclindy;
+
 contains
   ViewLog_U in '..\..\Source\ViewLog_U.pas' {ViewLog},
   CadPerfil_U in '..\..\Source\CadPerfil_U.pas' {CadPerfil},
@@ -50,7 +65,6 @@ contains
   UCIdle in '..\..\Source\UCIdle.pas',
   UCXPSettings in '..\..\Source\UCXPSettings.pas',
   UCIBXConn in '..\..\Source\UCIBXConn.pas',
-  UCDBXConn in '..\..\Source\UCDBXConn.pas',
-  UCBDEConn in '..\..\Source\UCBDEConn.pas';
+  UCDBXConn in '..\..\Source\UCDBXConn.pas';
 
 end.

@@ -1,27 +1,31 @@
 object UserPermis: TUserPermis
   Left = 259
   Top = 187
-  Width = 492
-  Height = 408
-  Caption = 'Seguran'#231'a'
-  Color = clBtnFace
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Permiss'#245'es'
+  ClientHeight = 394
+  ClientWidth = 555
+  Color = 16776176
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clTeal
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnKeyPress = FormKeyPress
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 484
-    Height = 35
+    Width = 555
+    Height = 41
     Align = alTop
-    BevelOuter = bvNone
+    BevelInner = bvLowered
     Color = clWhite
     TabOrder = 0
     object LbDescricao: TLabel
@@ -31,7 +35,7 @@ object UserPermis: TUserPermis
       Height = 18
       Caption = 'Permiss'#245'es do Usu'#225'rio:'
       Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clTeal
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
@@ -161,19 +165,24 @@ object UserPermis: TUserPermis
     end
   end
   object Panel3: TPanel
-    Left = 387
-    Top = 35
-    Width = 97
-    Height = 346
+    Left = 441
+    Top = 41
+    Width = 114
+    Height = 353
     Align = alRight
-    BevelOuter = bvNone
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    Color = 16776176
     TabOrder = 1
     object BtLibera: TBitBtn
-      Left = 8
-      Top = 16
+      Left = 16
+      Top = 48
       Width = 81
       Height = 25
+      Hint = 'Liberar tudo'
       Caption = '&Liberar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
       OnClick = BtLiberaClick
       Glyph.Data = {
@@ -230,11 +239,14 @@ object UserPermis: TUserPermis
       NumGlyphs = 2
     end
     object BtBloqueia: TBitBtn
-      Left = 8
-      Top = 56
+      Left = 16
+      Top = 96
       Width = 81
       Height = 25
+      Hint = 'Bloquear tudo'
       Caption = '&Bloquear'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
       OnClick = BtBloqueiaClick
       Glyph.Data = {
@@ -291,11 +303,14 @@ object UserPermis: TUserPermis
       NumGlyphs = 2
     end
     object BtGrava: TBitBtn
-      Left = 8
-      Top = 136
+      Left = 16
+      Top = 152
       Width = 81
       Height = 25
+      Hint = 'Gravar as altera'#231#245'es'
       Caption = '&Gravar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 2
       OnClick = BtGravaClick
       Glyph.Data = {
@@ -352,11 +367,13 @@ object UserPermis: TUserPermis
       NumGlyphs = 2
     end
     object BtCancel: TBitBtn
-      Left = 8
-      Top = 176
+      Left = 16
+      Top = 200
       Width = 81
       Height = 25
       Caption = '&Cancelar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 3
       OnClick = BtCancelClick
       Glyph.Data = {
@@ -415,10 +432,10 @@ object UserPermis: TUserPermis
   end
   object PC: TPageControl
     Left = 0
-    Top = 35
-    Width = 387
-    Height = 346
-    ActivePage = PageMenu
+    Top = 41
+    Width = 441
+    Height = 353
+    ActivePage = PageControls
     Align = alClient
     Style = tsFlatButtons
     TabOrder = 2
@@ -427,11 +444,17 @@ object UserPermis: TUserPermis
       object TreeMenu: TTreeView
         Left = 0
         Top = 0
-        Width = 379
-        Height = 315
+        Width = 433
+        Height = 322
         Align = alClient
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
         Images = ImageList1
         Indent = 19
+        ParentFont = False
         ReadOnly = True
         RightClickSelect = True
         TabOrder = 0
@@ -448,8 +471,8 @@ object UserPermis: TUserPermis
       object TreeAction: TTreeView
         Left = 0
         Top = 0
-        Width = 379
-        Height = 315
+        Width = 433
+        Height = 322
         Align = alClient
         Images = ImageList1
         Indent = 19
@@ -468,8 +491,8 @@ object UserPermis: TUserPermis
       object TreeControls: TTreeView
         Left = 0
         Top = 0
-        Width = 379
-        Height = 315
+        Width = 433
+        Height = 322
         Align = alClient
         Images = ImageList1
         Indent = 19
@@ -484,8 +507,7 @@ object UserPermis: TUserPermis
     end
   end
   object ImageList1: TImageList
-    Left = 360
-    Top = 8
+    Left = 344
     Bitmap = {
       494C010103000400040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010

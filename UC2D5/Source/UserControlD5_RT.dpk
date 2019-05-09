@@ -1,8 +1,8 @@
 package UserControlD5_RT;
 
 
-{$R *.RES}
-{$ALIGN ON}
+{$R *.res}
+{$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
 {$DEBUGINFO ON}
@@ -28,10 +28,13 @@ package UserControlD5_RT;
 {$IMPLICITBUILD ON}
 
 requires
-  Vcl50,
-  Vclbde50,
-  Vcldb50,
-  VCLIB50;
+  vcl,
+  bdertl,
+  vcldb,
+  ibxpress,
+  vclactnband,
+  dclindy,
+  indy;
 
 contains
   ViewLog_U in 'ViewLog_U.pas' {ViewLog},

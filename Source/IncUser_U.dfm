@@ -1,19 +1,22 @@
 object IncUser: TIncUser
   Left = 236
   Top = 209
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Cadastro de Usu'#225'rios'
   ClientHeight = 214
   ClientWidth = 472
-  Color = clBtnFace
+  Color = 16776176
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clTeal
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
+  OnKeyPress = FormKeyPress
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -23,6 +26,7 @@ object IncUser: TIncUser
     Width = 472
     Height = 35
     Align = alTop
+    BevelInner = bvRaised
     BevelOuter = bvNone
     Color = clWhite
     TabOrder = 2
@@ -33,7 +37,7 @@ object IncUser: TIncUser
       Height = 18
       Caption = 'Adicionar Usu'#225'rio'
       Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clTeal
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
@@ -156,13 +160,17 @@ object IncUser: TIncUser
     Height = 179
     Align = alRight
     BevelOuter = bvNone
+    Color = 16776176
     TabOrder = 1
     object btGravar: TBitBtn
       Left = 8
-      Top = 16
+      Top = 32
       Width = 81
       Height = 25
+      Hint = 'Clique para gravar as informa'#231#245'es'
       Caption = '&Gravar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
       OnClick = btGravarClick
       Glyph.Data = {
@@ -220,10 +228,13 @@ object IncUser: TIncUser
     end
     object btCancela: TBitBtn
       Left = 8
-      Top = 56
+      Top = 96
       Width = 81
       Height = 25
+      Hint = 'Cancelar e fechar'
       Caption = '&Cancelar'
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
       OnClick = btCancelaClick
       Glyph.Data = {
@@ -287,21 +298,22 @@ object IncUser: TIncUser
     Height = 179
     Align = alClient
     BevelInner = bvRaised
-    BevelOuter = bvLowered
+    BevelOuter = bvNone
+    Color = 16776176
     TabOrder = 0
     object lbNome: TLabel
       Left = 32
       Top = 24
-      Width = 34
+      Width = 38
       Height = 13
-      Caption = 'Nome :'
+      Caption = 'Nome :*'
     end
     object lbLogin: TLabel
       Left = 32
       Top = 56
-      Width = 32
+      Width = 36
       Height = 13
-      Caption = 'Login :'
+      Caption = 'Login :*'
     end
     object lbEmail: TLabel
       Left = 32
@@ -322,6 +334,7 @@ object IncUser: TIncUser
       Top = 112
       Width = 23
       Height = 22
+      Hint = 'Apagar um perfil escolhido'
       Flat = True
       Glyph.Data = {
         36050000424D3605000000000000360400002800000010000000100000000100
@@ -366,6 +379,8 @@ object IncUser: TIncUser
         0505050505050103010000000000000002050505050505010100000000000000
         0002050505050505010000000000000000000201010101010200000000000000
         0000000000000000000000000000000000000000000000000000}
+      ParentShowHint = False
+      ShowHint = True
       OnClick = btlimpaClick
     end
     object EditNome: TEdit
@@ -373,7 +388,11 @@ object IncUser: TIncUser
       Top = 16
       Width = 265
       Height = 21
+      Hint = 'Digite o nome do usu'#225'rio'#13#10'*(Campo obrigat'#243'rio)'
+      CharCase = ecUpperCase
       MaxLength = 30
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 0
     end
     object EditLogin: TEdit
@@ -381,7 +400,11 @@ object IncUser: TIncUser
       Top = 48
       Width = 265
       Height = 21
-      MaxLength = 30
+      Hint = 'Digite o login de entrada no sistema'#13#10'*(Campo obrigat'#243'rio)'
+      CharCase = ecUpperCase
+      MaxLength = 15
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 1
     end
     object EditEmail: TEdit
@@ -389,7 +412,11 @@ object IncUser: TIncUser
       Top = 80
       Width = 265
       Height = 21
+      Hint = 'Digite o e-mail do usu'#225'rio'
+      CharCase = ecLowerCase
       MaxLength = 150
+      ParentShowHint = False
+      ShowHint = True
       TabOrder = 2
     end
     object ckPrivilegiado: TCheckBox
@@ -421,6 +448,7 @@ object IncUser: TIncUser
     XPSettings.Font.Name = 'Tahoma'
     XPSettings.Font.Style = []
     XPSettings.Color = clBtnFace
+    XPSettings.DrawMenuBar = False
     XPSettings.IconBackColor = clBtnFace
     XPSettings.MenuBarColor = clBtnFace
     XPSettings.SelectColor = clHighlight
@@ -432,11 +460,13 @@ object IncUser: TIncUser
     XPSettings.IconWidth = 24
     XPSettings.DrawSelect = True
     XPSettings.UseSystemColors = True
+    XPSettings.UseDimColor = False
     XPSettings.OverrideOwnerDraw = False
     XPSettings.Gradient = False
     XPSettings.FlatMenu = False
     XPSettings.AutoDetect = False
     XPSettings.BitBtnColor = clBtnFace
+    XPSettings.ColorsChanged = True
     Left = 256
     Top = 8
   end

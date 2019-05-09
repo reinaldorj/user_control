@@ -26,6 +26,7 @@ type
     UCXPStyle: TUCXPStyle;
     procedure btCancelaClick(Sender: TObject);
     procedure btGravarClick(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
   private
     function GetNewIdUser: Integer;
     { Private declarations }
@@ -101,6 +102,16 @@ begin
   Result := TempDs.FieldByName('MaxUserID').asInteger + 1;
   TempDS.Close;
   FreeAndNil(TempDS);
+end;
+
+procedure TIncPerfil.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+if key = #27 then close;
+   if key = #13 then
+   begin
+   key := #0;
+   Perform(WM_NEXTDLGCTL, 0, 0);
+   end;
 end;
 
 end.

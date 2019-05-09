@@ -281,10 +281,10 @@ begin
   BtOK.Caption := Const_Contr_BtOK;
 
   //Lines Bellow added by fduenas
-  btSellAll.Hint := Const_Contr_BtSellAllHint;
-  btSel.Hint := Const_Contr_BtSelHint;
-  btUnSel.Hint := Const_Contr_BtUnSelHint;
-  btUnSelAll.Hint := Const_Contr_BtUnSelAllHint;
+ // btSellAll.Hint := Const_Contr_BtSellAllHint;
+  //btSel.Hint := Const_Contr_BtSelHint;
+ // btUnSel.Hint := Const_Contr_BtUnSelHint;
+ // btUnSelAll.Hint := Const_Contr_BtUnSelAllHint;
   //
 end;
 

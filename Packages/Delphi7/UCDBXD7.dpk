@@ -30,7 +30,6 @@ requires
   designide;
 
 contains
-  UCDBXReg in '..\..\Source\UCDBXReg.pas',
-  UCDBXConn in '..\..\Source\UCDBXConn.pas';
+  UCDBXReg in '..\..\Source\UCDBXReg.pas';
 
 end.

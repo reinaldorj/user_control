@@ -1,8 +1,8 @@
 package UserControlD5_DT;
 
-{$R *.RES}
+{$R *.res}
 {$R 'UCReg.dcr'}
-{$ALIGN ON}
+{$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
 {$DEBUGINFO ON}
@@ -29,8 +29,8 @@ package UserControlD5_DT;
 
 requires
   UserControlD5_RT,
-  vcljpg50,
-  dsnide50;
+  vcljpg,
+  designide;
 
 contains
   UCReg in 'UCReg.pas',

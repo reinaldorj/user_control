@@ -13,10 +13,6 @@ Const
   Const_Contr_BTCancel = '&Cancelar';
   Const_Contr_DescCol = 'Descrição';
 
-  Const_Contr_BtSellAllHint = 'Select All'; //added by fduenas
-  Const_Contr_BtSelHint = 'Select'; //added by fduenas
-  Const_Contr_BtUnSelHint = 'Unselect'; //added by fduenas
-  Const_Contr_BtUnSelAllHint = 'Unselect All'; //added by fduenas
   //===================================================================
 
 
@@ -25,16 +21,11 @@ Const
   Const_Msgs_BtReplay      = '&Responder';
   Const_Msgs_BtForward     = 'E&ncaminhar';
   Const_Msgs_BtDelete      = '&Excluir';
-  Const_Msgs_BtClose       = '&Close'; //added by fduenas
   Const_Msgs_WindowCaption = 'Mensagens do Sistema';
   Const_Msgs_ColFrom       = 'Remetente';
   Const_Msgs_ColSubject    = 'Assunto';
   Const_Msgs_ColDate       = 'Data';
   Const_Msgs_PromptDelete  = 'Confirma excluir as mensagens selecionadas ?';
-  Const_Msgs_PromptDelete_WindowCaption  = 'Delete messages'; //added by fduenas
-  Const_Msgs_NoMessagesSelected = '!No Messages selected¡'; //added by fduenas
-  Const_Msgs_NoMessagesSelected_WindowCaption = 'Information'; //added by fduenas
-
 
   // group property Settins.AppMsgsRec
   Const_MsgRec_BtClose       = '&Fechar';
@@ -54,8 +45,6 @@ Const
   Const_MsgSend_RadioUser     = 'Usuário :';
   Const_MsgSend_RadioAll      = 'Todos';
   Const_MsgSend_GroupMessage  = 'Mensagem';
-  Const_MsgSend_LabelSubject  = 'Subject'; //added by fduenas
-  Const_MsgSend_LabelMessageText = 'Message text'; //added by fduenas
 
 
   // Run errors
@@ -100,14 +89,11 @@ Const
   Const_LogC_BtExcluir       = '&Excluir Log';
   Const_LogC_BtFechar        = '&Fechar';
   Const_LogC_ConfirmaExcluir = 'Confirma excluir todos os registros de log selecionados ?';
-  Const_LogC_ConfirmaDelete_WindowCaption = 'Delete confirmation'; //added by fduenas
   Const_LogC_Todos = 'All';       //BGM
   Const_LogC_Low = 'Baixo';       //BGM
   Const_LogC_Normal = 'Normal';   //BGM
   Const_LogC_High = 'Alto';       //BGM
   Const_LogC_Critic = 'Crítico';  //BGM
-  Const_LogC_ExcluirEfectuada = 'Deletion of system log done: '+
-                                'User = "%s" | Date = %s a %s | Level <= %s'; //added by fduenas
 
   //group property Settings.CadastroUsuarios
   Const_Cad_WindowCaption   = 'Segurança';
@@ -122,7 +108,6 @@ Const
   Const_Cad_BtSenha         = '&Senha';
   Const_Cad_BtFechar        = '&Fechar';
   Const_Cad_ConfirmaExcluir = 'Confirma excluir o usuário "%s" ?';
-  Const_Cad_ConfirmaDelete_WindowCaption = 'Delete user'; //added by fduenas
 
   //group property Settings.PerfilUsuarios
   Const_Prof_WindowCaption   = 'Segurança';
@@ -135,7 +120,6 @@ Const
   Const_Prof_BtSenha         = '&Senha';
   Const_Prof_BtFechar        = '&Fechar';
   Const_Prof_ConfirmaExcluir = 'Existem usuários com o perfil "%s". Confirma excluir?';
-  Const_Prof_ConfirmaDelete_WindowCaption = 'Delete profile'; //added by fduenas
 
   //group property Settings.IncAltUsuario
   Const_Inc_WindowCaption     = 'Cadastro de Usuários';

@@ -565,7 +565,7 @@ object UCEditorForm: TUCEditorForm
       Top = 1
       Width = 658
       Height = 409
-      ActivePage = TabLink
+      ActivePage = TabPrincipal
       Align = alClient
       TabOrder = 0
       object TabPrincipal: TTabSheet
@@ -625,7 +625,7 @@ object UCEditorForm: TUCEditorForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 0
         end
         object ActionCadUser: TComboBox
@@ -634,7 +634,7 @@ object UCEditorForm: TUCEditorForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 1
         end
         object MenuCadPerf: TComboBox
@@ -643,7 +643,7 @@ object UCEditorForm: TUCEditorForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 2
         end
         object ActionCadPerf: TComboBox
@@ -652,7 +652,7 @@ object UCEditorForm: TUCEditorForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 3
         end
         object MenuTrocaSenha: TComboBox
@@ -661,7 +661,7 @@ object UCEditorForm: TUCEditorForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 4
         end
         object ActionTrocaSenha: TComboBox
@@ -670,7 +670,7 @@ object UCEditorForm: TUCEditorForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 5
         end
         object EditID: TEdit
@@ -686,7 +686,7 @@ object UCEditorForm: TUCEditorForm
           Width = 393
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 7
         end
         object TabelaUsuarios: TEdit
@@ -1201,7 +1201,7 @@ object UCEditorForm: TUCEditorForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 3
         end
         object ActionLog: TComboBox
@@ -1210,7 +1210,7 @@ object UCEditorForm: TUCEditorForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 4
         end
       end

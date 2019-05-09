@@ -1,33 +1,35 @@
 object ViewLog: TViewLog
   Left = 192
   Top = 114
-  Width = 696
+  Width = 781
   Height = 510
-  Caption = 'Seguran'#231'a'
-  Color = clBtnFace
+  Caption = 'Log de usu'#225'rio'
+  Color = 16776176
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clTeal
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
   OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Splitter1: TSplitter
     Left = 177
-    Top = 35
-    Height = 448
+    Top = 41
+    Height = 435
     Beveled = True
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 688
-    Height = 35
+    Width = 773
+    Height = 41
     Align = alTop
     BevelOuter = bvNone
     Color = clWhite
@@ -39,7 +41,7 @@ object ViewLog: TViewLog
       Height = 18
       Caption = 'Log do Sistema'
       Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clTeal
       Font.Height = -16
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
@@ -157,11 +159,12 @@ object ViewLog: TViewLog
   end
   object Panel2: TPanel
     Left = 0
-    Top = 35
+    Top = 41
     Width = 177
-    Height = 448
+    Height = 435
     Align = alLeft
     BevelOuter = bvNone
+    Color = 16776176
     TabOrder = 1
     object lbUsuario: TLabel
       Left = 16
@@ -206,9 +209,9 @@ object ViewLog: TViewLog
       Style = bsRaised
     end
     object btfiltro: TBitBtn
-      Left = 38
+      Left = 24
       Top = 272
-      Width = 101
+      Width = 115
       Height = 31
       Caption = 'Aplicar filtro'
       Enabled = False
@@ -268,9 +271,9 @@ object ViewLog: TViewLog
       NumGlyphs = 2
     end
     object btfecha: TBitBtn
-      Left = 38
-      Top = 352
-      Width = 101
+      Left = 24
+      Top = 360
+      Width = 115
       Height = 31
       Caption = 'Fechar'
       TabOrder = 5
@@ -329,9 +332,9 @@ object ViewLog: TViewLog
       NumGlyphs = 2
     end
     object btexclui: TBitBtn
-      Left = 38
-      Top = 312
-      Width = 101
+      Left = 24
+      Top = 320
+      Width = 115
       Height = 31
       Caption = 'Excluir Log'
       TabOrder = 6
@@ -386,6 +389,7 @@ object ViewLog: TViewLog
       Width = 145
       Height = 21
       Style = csDropDownList
+      CharCase = ecUpperCase
       ItemHeight = 13
       TabOrder = 0
       OnChange = ComboUsuarioChange
@@ -393,7 +397,7 @@ object ViewLog: TViewLog
     object data1: TDateTimePicker
       Left = 16
       Top = 104
-      Width = 89
+      Width = 145
       Height = 21
       Date = 37615.000000000000000000
       Time = 37615.000000000000000000
@@ -403,7 +407,7 @@ object ViewLog: TViewLog
     object data2: TDateTimePicker
       Left = 16
       Top = 136
-      Width = 89
+      Width = 145
       Height = 21
       Date = 37615.000000000000000000
       Time = 37615.000000000000000000
@@ -416,41 +420,44 @@ object ViewLog: TViewLog
       Width = 145
       Height = 24
       Style = csOwnerDrawFixed
+      CharCase = ecUpperCase
       ItemHeight = 18
       TabOrder = 3
       OnChange = ComboUsuarioChange
       OnDrawItem = ComboNivelDrawItem
       Items.Strings = (
-        'Faible'
-        'Moyen'
-        'Haut'
-        'Critique')
+        'FAIBLE'
+        'MOYEN'
+        'HAUT'
+        'CRITIQUE')
     end
   end
   object Panel3: TPanel
     Left = 180
-    Top = 35
-    Width = 508
-    Height = 448
+    Top = 41
+    Width = 593
+    Height = 435
     Align = alClient
     BevelOuter = bvNone
+    Color = 16776176
     TabOrder = 2
     DesignSize = (
-      508
-      448)
+      593
+      435)
     object DBGrid1: TDBGrid
       Left = 3
       Top = 6
-      Width = 504
-      Height = 438
+      Width = 589
+      Height = 432
       Anchors = [akLeft, akTop, akRight, akBottom]
       DataSource = DataSource1
       DefaultDrawing = False
+      FixedColor = 16776176
       Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
       ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
-      TitleFont.Color = clWindowText
+      TitleFont.Color = clTeal
       TitleFont.Height = -11
       TitleFont.Name = 'MS Sans Serif'
       TitleFont.Style = []
@@ -469,7 +476,7 @@ object ViewLog: TViewLog
           FieldName = 'msg'
           Title.Alignment = taCenter
           Title.Caption = 'Mensagem'
-          Width = 352
+          Width = 279
           Visible = True
         end
         item
@@ -494,8 +501,8 @@ object ViewLog: TViewLog
     Left = 440
   end
   object ImageList1: TImageList
-    Left = 136
-    Top = 153
+    Left = 112
+    Top = 113
     Bitmap = {
       494C010104000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
